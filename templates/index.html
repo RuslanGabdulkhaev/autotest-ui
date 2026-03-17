@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .h2-text {
+        color: red
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Убирает двойные рамки */
+            margin: 20px 0;
+            font-family: sans-serif;
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Цвет границ */
+            padding: 12px;         /* Отступы внутри ячеек */
+            text-align: left;
+        }
+
+        thead {
+            background-color: #f4f4f4; /* Цвет шапки */
+            font-weight: bold;
+        }
+
+        /* Опционально: эффект зебры для строк */
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="h1-text">Playwright</h1>
+    <h2 class="h2-text">Installation</h2>
+    <h3 class="h2-text">Introduction</h3>
+    <p>
+        <b>
+            Playwright Test is an end-to-end test framework for modern web apps. It bundles test runner, assertions,
+            isolation,
+            parallelization and rich tooling. <br> Playwright supports Chromium, WebKit and Firefox on Windows, Linux
+            and macOS,
+            locally or in CI, headless or headed, with native mobile emulation for Chrome (Android) and <span
+                style="color: red">Mobile Safari.</span>
+        </b>
+    </p>
+    <a href="https://playwright.dev/docs/intro#introduction" target="_blank" rel="noopener noreferrer">Playwright
+        web</a>
+    <img alt="browsers.png" src="https://playwright.dev/img/logos/Browsers.png" style="width: 250px">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <form action="/action" method="POST">
+        <label>
+            <input type="text" value="1234" placeholder="Text">
+        </label>
+        <br><label>
+        <input required type="email" value="" placeholder="test@mail.ru">
+    </label>
+        <br> <label>
+        <input type="password" value="" placeholder="password">
+    </label>
+        <br> <label>
+        <textarea required placeholder="Textarea">12345</textarea>
+    </label>
+        <br>
+        <button type="submit" value="Отправить">Send</button>
+        <br>
+        <button type="reset">Reset</button>
+        <br>
+        <button type="button" disabled>Button</button>
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>Item 1</th>
+            <th>Item 2</th>
+            <th>Item 3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Row1</td>
+            <td>Row2</td>
+            <td>Row3</td>
+        </tr>
+        <tr>
+            <td>Row4</td>
+            <td>Row5</td>
+            <td>Row6</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
