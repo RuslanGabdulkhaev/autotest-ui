@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        h3 {
+        font-size: 15x
+        }
         .h2-text {
         color: red
+        }
+        .h6-text {
+        color: green
+        }
+        #h1-text {
+        font-size: 50px
         }
         table {
             width: 100%;
@@ -29,13 +38,34 @@
         tbody tr:nth-child(even) {
             background-color: #fafafa;
         }
+        div.container >a {
+        color: pink
+        }
+
+        ul li {
+        color: green
+        }
+
+        input[type="text"] {
+        background-color: blue
+        }
+        a:hover {
+        color: red
+        }
+        input[type="text"]:hover {
+        background-color: #fafafa
+        }
+        li::marker {
+        color: red
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
     <h1 id="h1-text">Playwright</h1>
     <h2 class="h2-text">Installation</h2>
-    <h3 class="h2-text">Introduction</h3>
+    <h3 class="h3-text h6-text">Introduction</h3>
     <p>
         <b>
             Playwright Test is an end-to-end test framework for modern web apps. It bundles test runner, assertions,
@@ -100,6 +130,10 @@
         </tr>
         </tbody>
     </table>
+</div>
+<div class="Yandex">
+    <h2 class="h2-text">Installation</h2>
+    <a href="https://ya.ru/" target="_blank" rel="noopener noreferrer">Yandex search</a>
 </div>
 </body>
 </html>
