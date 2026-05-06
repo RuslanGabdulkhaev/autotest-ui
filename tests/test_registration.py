@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 def test_successful_registration():
     with sync_playwright() as playwright:
@@ -28,9 +28,14 @@ def test_successful_registration():
         context.storage_state(path='browser-state.json')
 
     with sync_playwright() as playwright:
-        # Открываем браузер и создаем новую страницу
+        # Открываем браузер и открываем новую страницу
         browser = playwright.chromium.launch(headless=False)
         context = browser.new_context(storage_state='browser-state.json')
         page = context.new_page()
 
         page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard')
+
+        # Проверяем, что существует заголовок "Dashboard"
+        dashboard_headers = page.get_by_test_id('dashboard-toolbar-title-text')
+        expect(dashboard_headers).to_be_visible()
+        expect(dashboard_headers).to_have_text("Dashboard")
