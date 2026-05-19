@@ -56,3 +56,32 @@ class TestUserInterface:
     @pytest.mark.smoke
     def test_signup_form(self):
         pass
+
+
+@pytest.mark.performance
+def test_memory_usage():
+    pass
+
+@pytest.mark.slow
+class TestStress:
+    def test_stress_1(self):
+        pass
+
+    @pytest.mark.performance
+    def test_stress_2(self):
+        pass
+
+
+@pytest.mark.smoke
+def test_user_exists():
+    pass
+
+
+@pytest.mark.regression
+class TestUserFlow:
+    @pytest.mark.smoke
+    def test_user_can_login(self):
+        pass
+
+    def test_user_can_register(self):
+        pass
